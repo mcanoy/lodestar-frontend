@@ -13,7 +13,8 @@ import {
 import BasicInformation from "./Steps/01_BasicInformation";
 import ClusterInformation from "./Steps/03_ClusterInformation";
 import PointOfContact from "./Steps/02_PointOfContact";
-import LaunchCluster from "./Steps/04_LaunchCluster";
+import LaunchCluster from "./Steps/05_LaunchCluster";
+import ResidencyUser from "./Steps/04_ResidencyUser";
 import Logo from "./Components/Logo/Logo";
 import formReducer from "./formReducer";
 import initialState from "./initialState";
@@ -93,6 +94,11 @@ const App = () => {
                   onChange={dispatch}
                 />
               ),
+              hideCancelButton: true
+            },
+            {
+              name: "Residency Users",
+              component: <ResidencyUser values={state} onChange={dispatch} />,
               hideCancelButton: true
             },
             {
