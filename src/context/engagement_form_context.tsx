@@ -37,7 +37,6 @@ export const EngagementFormProvider = ({
   useEffect(() => {
     getSessionData()
       .then(({ data }) => {
-        console.log(data);
         setSessionData(yaml.parse(data.fileContent));
       })
       .catch(e => setRequestError(e));
