@@ -1,7 +1,0 @@
-#!/bin/bash
-
-echo "blahhhhhhhhhh!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-
-env | sort
-
-/usr/libexec/s2i/run
