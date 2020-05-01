@@ -1,0 +1,5 @@
+#!/bin/bash
+
+env | sort
+
+/usr/libexec/s2i/run
