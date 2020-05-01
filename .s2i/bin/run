@@ -1,11 +1,9 @@
 #!/bin/bash
 
-echo "blahhhhhhhhhh!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo "omp s2i"
 
-env | sort
+sed -i 's@v0.0.1-local@'"$OMP_FRONTEND_GIT_TAG"'@' manifest.json
 
-source ${HTTPD_CONTAINER_SCRIPTS_PATH}/common.sh
+cat manifest.json
 
-export HTTPD_RUN_BY_S2I=1
-
-exec run-httpd $@
+/usr/libexec/s2i/run 
