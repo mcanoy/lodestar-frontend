@@ -36,7 +36,7 @@ Cypress.Commands.add(
       form: true,
       method: 'POST',
       url: url,
-      failOnStatusCode: false,
+      failOnStatusCode: true,
       body: {
         username: email,
         password: password,
